@@ -14,13 +14,19 @@ add_action('woocommerce_after_shop_loop_item', 'hideAddToCart');
  function hideAddToCart()
 {
     global $product;
-    $status = $product->get_stock_status();
     
-    if($status == "outofstock")
+    if($product->get_stock_status() == "outofstock")
     {
-        //echo $product->get_id();
-        remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
-        remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart');
+        $p_id = $product->get_id();
+        ?>
+        
+        <style>
+            a.button[data-product_id='<?php echo $p_id; ?>']
+            {
+                display: none !important;
+            }
+        </style>
+        
+        <?php
     }
-    //var_dump($product);
 }
