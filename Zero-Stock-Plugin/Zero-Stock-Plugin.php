@@ -2,9 +2,9 @@
 
 /**
  * Plugin Name:       Zero Stock Plugin
- * Plugin URI:        
+ * Plugin URI:        https://github.com/HRIDOY-BUZZ/WP-WC-Plugins/blob/master/Zero-Stock-Plugin/Zero-Stock-Plugin.php
  * Description:       Hides the Add to Cart button for Zero stock or out of stock WooCommerce products
- * Version:           1.0
+ * Version:           1.0.0
  * Author:            Al-Amin Islam Hridoy
  * Author URI:        https://github.com/HRIDOY-BUZZ
  */
